@@ -6,4 +6,4 @@
 ## 회원정보 수정
  - /users?username=이름&email=이메일 (PUT)
 ## 회원정보 삭제
- - /users?id=아이디 (REMOVE)	
+ - /users?id=아이디 (REMOVE)	바보바보바보
