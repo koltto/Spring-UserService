@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class HomeController {
 	@GetMapping
-	public String home(@RequestParam(name="message" , defaultValue="tuna") String message
+	public String home(@RequestParam(name="message" , defaultValue="Let's Linux(?)") String message
 			           ,Model model) {
 		
 		log.info("message: {}" + message);

@@ -1,5 +1,7 @@
 package com.example.board;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,5 +37,12 @@ public class UserController {
 	   userRepository.save(user);
 	   
 	   return user; 
+   }
+   
+   // 회원정보 조회
+   @GetMapping("users/{id}")
+   public User getUser(@PathVariable(name="id") Long id) {
+	   log.info("id: {}", id);
+	   return userRepository.getUser(id);
    }
 }

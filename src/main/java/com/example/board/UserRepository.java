@@ -1,8 +1,32 @@
+
 package com.example.board;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Repository;
+
 import com.example.board.User;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+/*import org.springframework.data.jpa.repository.JpaRepository; 
+  
+ * 
+ * public interface UserRepository extends JpaRepository<User, Long> {
+ * 
+ * }
+ */
 
+@Repository
+public class UserRepository {
+	private Map<Long, User> users = new HashMap<>();
+	private Long id = 0L;
+	
+	public void save(User user) {
+		user.setId(++id);
+		users.put(id, user);
+	}
+	
+	public User getUser(Long id) {
+		return users.get(id);
+	}
 }
