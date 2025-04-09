@@ -3,11 +3,11 @@
 REPOSITORY=/home/ec2-user/service/app
 PROJECT_NAME=Spring-UserService
 
-CD $REPOSITORY
+cd $REPOSITORY
 
 echo "> Build 파일 복사"
 
-cp $REPOSITORY/$PROJECT_NAME/build/libs/$PROJECT_NAME-0.0.1-SNAPSHOT.jar $REPOSITORY/
+cp $REPOSITORY/build/libs/$PROJECT_NAME-0.0.1-SNAPSHOT.jar $REPOSITORY/
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 
